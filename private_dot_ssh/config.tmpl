@@ -1,0 +1,34 @@
+Host vps_nu
+  HostName 91.134.134.233
+  User ubuntu
+  IdentityFile ~/.ssh/id_nu
+
+Host server_nu
+  HostName 10.9.208.1
+  User naitup
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+  IdentitiesOnly yes
+
+Host milhanas
+  HostName 100.80.80.80
+  User skamos
+  Port 222
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+
+Host gitea
+  HostName gitea.milhanas.fr
+  User jayma
+  Port 2222
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+
+Host nasus
+  HostName 100.80.80.118
+  User Skamos
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+
+IdentityFile /home/jayma/.ssh/id_{{ .hostname }}

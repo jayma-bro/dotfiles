@@ -1,0 +1,27 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"        # numéros relatifs (utile pour les jumps : 5j = 5 lignes en bas)
+mouse = true
+cursorline = true
+auto-format = true
+bufferline = "multiple"          # affiche la liste des fichiers ouverts en haut
+color-modes = true               # le mode (normal/insert/select) change de couleur
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+character = "╎"
