@@ -25,7 +25,7 @@ config.front_end = "WebGpu"  -- meilleur perf que OpenGL sur ta RTX 4070
 
 -- Désactive le multiplexeur intégré de WezTerm (on utilise Zellij à la place)
 config.enable_tab_bar = false
-
+config.window_close_confirmation = 'NeverPrompt'
 mouse_bindings = {
   -- Ctrl-click will open the link under the mouse cursor
   {
