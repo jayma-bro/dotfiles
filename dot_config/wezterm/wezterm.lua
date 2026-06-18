@@ -35,4 +35,8 @@ mouse_bindings = {
   },
 }
 
+-- Scroll et historique
+config.alternate_buffer_wheel_scroll_speed = 1
+config.scrollback_lines = 4000
+
 return config
