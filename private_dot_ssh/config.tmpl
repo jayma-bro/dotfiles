@@ -26,6 +26,21 @@ Host milhanas_lan
   Port 222
   IdentityFile ~/.ssh/id_{{ .hostname }}
 
+Host dei_lan
+  HostName 192.168.1.88
+  User jayma
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+
+Host dei_ts
+  HostName 100.88.88.88
+  User jayma
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+
+Host dei
+  HostName milhanas.fr
+  User jayma
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+
 Host gitea
   HostName gitea.milhanas.fr
   User jayma
