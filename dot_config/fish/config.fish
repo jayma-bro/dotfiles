@@ -6,11 +6,9 @@ end
 alias ls 'eza --icons --group-directories-first'
 alias ll 'eza -lah --icons --group-directories-first --git'
 alias lt 'eza --tree --level=2 --icons'
-alias bcat 'batcat --paging=never'
-alias fd 'fdfind'  # Contournement du nom Debian
 
 # ───── Variables d'environnement ─────
-set -gx EDITOR nano  # ou vim/nvim selon ta préférence
+set -gx EDITOR hx  # ou vim/nvim selon ta préférence
 set -gx BAT_THEME "Catppuccin-mocha"
 
 # ───── Initialisations ─────
