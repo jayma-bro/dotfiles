@@ -48,6 +48,11 @@ format = '\[[$symbol($version)]($style)\]'
 [deno]
 format = '\[[$symbol($version)]($style)\]'
 
+[directory]
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
 [direnv]
 format = '\[[$symbol$loaded/$allowed]($style)\]'
 
