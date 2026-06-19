@@ -16,5 +16,7 @@ starship init fish | source
 zoxide init fish | source
 atuin init fish | source
 
+fish_add_path ~/.local/bin
+
 # ───── Désactive le message de bienvenue ─────
 set -U fish_greeting ""
