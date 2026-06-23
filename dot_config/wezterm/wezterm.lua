@@ -1,6 +1,9 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
+-- Lance zellij en attachant (ou créant) la session "main"
+config.default_prog = { 'zellij', 'attach', '--create', 'main' }
+
 -- Apparence
 config.color_scheme = 'Catppuccin Mocha'  -- inclus nativement dans WezTerm
 config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Regular' })
