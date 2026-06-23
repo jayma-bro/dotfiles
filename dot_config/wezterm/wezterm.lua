@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm'
+local act = wezterm.action
 local config = wezterm.config_builder()
 
 -- Lance zellij en attachant (ou créant) la session "main"
@@ -23,9 +24,6 @@ config.window_decorations = "TITLE | RESIZE"
 -- config.default_prog = { '/usr/bin/fish', '-l', '-c', 'zellij attach -c main' }
 -- config.window_close_confirmation = 'NeverPrompt'
 
--- Performance
-config.front_end = "WebGpu"  -- meilleur perf que OpenGL sur ta RTX 4070
-
 -- Désactive le multiplexeur intégré de WezTerm (on utilise Zellij à la place)
 config.enable_tab_bar = false
 config.window_close_confirmation = 'NeverPrompt'
@@ -38,6 +36,24 @@ mouse_bindings = {
   },
 }
 
+config.keys = {
+  -- Ctrl+Shift+T → nouvelle fenêtre WezTerm avec Zellij (remplace l'onglet par défaut)
+  {
+    key = 't',
+    mods = 'CTRL|SHIFT',
+    action = act.SpawnCommandInNewWindow {
+      args = { 'zellij'},
+    },
+  },
+  -- Ctrl+Shift+N → nouvelle fenêtre shell nu pour SSH
+  {
+    key = 'n',
+    mods = 'CTRL|SHIFT',
+    action = act.SpawnCommandInNewWindow {
+      args = { 'fish' },
+    },
+  },
+}
 -- Scroll et historique
 config.alternate_buffer_wheel_scroll_speed = 1
 config.scrollback_lines = 4000
