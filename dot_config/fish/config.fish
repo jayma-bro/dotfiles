@@ -4,7 +4,7 @@ if status is-interactive
 end
 # ───── Alias pour outils modernes ─────
 alias ls 'eza --icons --group-directories-first'
-alias ll 'eza -lah --icons --group-directories-first --git'
+alias ll 'eza -lahg --icons --group-directories-first --git'
 alias lt 'eza --tree --level=2 --icons'
 
 # ───── Variables d'environnement ─────
@@ -20,3 +20,6 @@ fish_add_path ~/.local/bin
 
 # ───── Désactive le message de bienvenue ─────
 set -U fish_greeting ""
+
+# Mammouth Code
+set -gx PATH $HOME/.mammouth/bin $PATH
