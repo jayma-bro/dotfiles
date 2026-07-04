@@ -47,6 +47,11 @@ Host gitea
   Port 2222
   IdentityFile ~/.ssh/id_{{ .hostname }}
 
+Host junko
+  HostName 100.80.80.2
+  User jayma
+  IdentityFile ~/.ssh/id_{{ .hostname }}
+
 Host nasus
   HostName 100.80.80.118
   User Skamos
