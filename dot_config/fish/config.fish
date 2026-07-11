@@ -7,6 +7,9 @@ alias ls 'eza --icons --group-directories-first'
 alias ll 'eza -lahg --icons --group-directories-first --git'
 alias lt 'eza --tree --level=2 --icons'
 
+# --- autre Alias ---
+alias protontricks="flatpak run com.github.Matoking.protontricks
+
 # ───── Variables d'environnement ─────
 set -gx EDITOR hx  # ou vim/nvim selon ta préférence
 set -gx BAT_THEME "Catppuccin-mocha"
@@ -36,4 +39,3 @@ else
     end
 end
 # <<< conda initialize <<<
-
