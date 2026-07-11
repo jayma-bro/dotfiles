@@ -8,11 +8,11 @@ alias ll 'eza -lahg --icons --group-directories-first --git'
 alias lt 'eza --tree --level=2 --icons'
 
 # --- autre Alias ---
-alias protontricks="flatpak run com.github.Matoking.protontricks
+alias protontricks 'flatpak run com.github.Matoking.protontricks'
 
 # ───── Variables d'environnement ─────
-set -gx EDITOR hx  # ou vim/nvim selon ta préférence
-set -gx BAT_THEME "Catppuccin-mocha"
+set -gx EDITOR hx # ou vim/nvim selon ta préférence
+set -gx BAT_THEME Catppuccin-mocha
 
 # ───── Initialisations ─────
 starship init fish | source
@@ -30,12 +30,12 @@ set -gx PATH $HOME/.mammouth/bin $PATH
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /home/jayma/miniforge3/bin/conda
-    eval /home/jayma/miniforge3/bin/conda "shell.fish" "hook" $argv | source
+    eval /home/jayma/miniforge3/bin/conda "shell.fish" hook $argv | source
 else
     if test -f "/home/jayma/miniforge3/etc/fish/conf.d/conda.fish"
         . "/home/jayma/miniforge3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/jayma/miniforge3/bin" $PATH
+        set -x PATH /home/jayma/miniforge3/bin $PATH
     end
 end
 # <<< conda initialize <<<
